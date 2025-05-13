@@ -124,7 +124,7 @@ body {
     grid-template-rows: repeat(3, auto);
     align-items: center;
     justify-items: center;
-    grid-gap: 6px;
+    grid-gap: 0px;
 }
 
 .main-cta { 
@@ -204,11 +204,21 @@ body {
 .deco-btn-1 {
     grid-column: 1 / 4;
     grid-row: 1;
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-B.svg);
+}
+
+.deco-btn-2 {
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-A.svg);
+}
+
+.deco-btn-3 {
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-A.svg);
 }
 
 .deco-btn-4 {
     grid-column: 1 / 4;
     grid-row: 3;
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-B.svg);
 }
 
 .deco-btn-5 {
@@ -233,6 +243,26 @@ body {
 
 .deco-btn-9, .deco-btn-10 {
     background-image: url(Ressources/Images/Decos-CTAs/btn-deco-E.svg);
+}
+
+.deco-btn-11 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-B.svg);
+}
+
+.deco-btn-12 {
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-A.svg);
+}
+
+.deco-btn-13 {
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-A.svg);
+}
+
+.deco-btn-14 {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    background-image: url(Ressources/Images/Decos-CTAs/btn-deco-B.svg);
 }
 
 /* ----------------------------- */
@@ -425,3 +455,111 @@ body {
 
 
 /* -------------------------------------- */
+
+/* ----------- Footer ----------- */
+
+footer {
+    background: linear-gradient(rgba(13, 3, 18, 0.6), rgba(13, 3, 18, 0.6)), url("Ressources/Images/Footer-background.png") no-repeat center center;
+    background-size: cover;
+    height: 250px;
+    border-top: solid 1px #F7EFFB;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.footer-full-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.footer-logo {
+    height: 150px;
+    width: auto;
+}
+
+.footer-title {
+    font-family: 'Nico-Moji';
+    font-size: 20px;
+    color: #F7EFFB;
+}
+
+.contact-cta {
+    background: rgba(13, 3, 18, 0.5);
+}
+
+.contact-bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+.social-icon {
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+}
+
+.fbk-icon {
+    background: url("Ressources/Images/Social-icons/facebook.svg") no-repeat center center;
+}
+
+.insta-icon {
+    background: url("Ressources/Images/Social-icons/instagram.svg") no-repeat center center;
+}
+
+.ytb-icon {
+    background: url("Ressources/Images/Social-icons/youtube.svg") no-repeat center center;
+}
+
+.x-icon {
+    background: url("Ressources/Images/Social-icons/x.svg") no-repeat center center;
+}
+
+.tiktok-icon {
+    background: url("Ressources/Images/Social-icons/tiktok.svg") no-repeat center center;
+}
+
+.discord-icon {
+    background: url("Ressources/Images/Social-icons/discord.svg") no-repeat center center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 220px;
+    height: fit-content;
+}
+
+.footer-parag, .footer-link {
+    margin: 0;
+    color: #A6B7C3;
+}
+
+.footer-parag {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+/* ------------------------------ */
