@@ -383,6 +383,11 @@ body {
 @media screen and (max-width: 474px) {
     .landing-article-cta {
         font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        padding-top: 12px;
+        padding-bottom: 0;
     }
 }
 
