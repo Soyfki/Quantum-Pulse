@@ -138,6 +138,15 @@ body {
     text-decoration: none;
 }
 
+.main-cta:hover {
+    box-shadow: 0px 0px 20px #F7A100;
+}
+
+.main-cta:active {
+    background-color: #F7A100;
+    color: #FF3700;
+}
+
 .secondary-cta { 
     font-family: 'Nico-Moji';
     font-size: 24px;
@@ -147,6 +156,17 @@ body {
     border-radius: 10px;
     padding: 10px 16px;   
     text-decoration: none; 
+}
+
+.secondary-cta:hover {
+    color: #D2A0E4;
+    border-color: #D2A0E4;
+}
+
+.secondary-cta:active {
+    background-color: #D2A0E4;
+    color: #0D0312;
+    border-color: #D2A0E4;
 }
 
 .decorated-cta {
@@ -352,6 +372,17 @@ body {
     padding: 10px 16px;
 }
 
+.landing-article-cta:hover {
+    color: #D2A0E4;
+    border-color: #D2A0E4;
+}
+
+.landing-article-cta:active {
+    background-color: #D2A0E4;
+    color: #0D0312;
+    border-color: #D2A0E4;
+}
+
 @media screen and (max-width: 1040px) {
     .landing-article {
     flex-direction: column;
@@ -376,6 +407,7 @@ body {
     }
 
     .landing-article-content {
+        padding-top: 0;
         width: 100%;
     }
 }
