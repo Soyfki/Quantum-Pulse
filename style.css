@@ -22,10 +22,10 @@ body {
 
 @font-face {
     font-family: 'Nico-Moji';
-    src:url('ressources/fonts/nico-moji/nico-moji.ttf.woff') format('woff'),
-        url('ressources/fonts/nico-moji/nico-moji.ttf.svg#Nico-Moji') format('svg'),
-        url('ressources/fonts/nico-moji/nico-moji.ttf.eot'),
-        url('ressources/fonts/nico-moji/nico-moji.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('resources/fonts/nico-moji/nico-moji.ttf.woff') format('woff'),
+        url('resources/fonts/nico-moji/nico-moji.ttf.svg#Nico-Moji') format('svg'),
+        url('resources/fonts/nico-moji/nico-moji.ttf.eot'),
+        url('resources/fonts/nico-moji/nico-moji.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -204,65 +204,65 @@ body {
 .deco-btn-1 {
     grid-column: 1 / 4;
     grid-row: 1;
-    background-image: url(ressources/images/decos-ctas/btn-deco-b.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-b.svg);
 }
 
 .deco-btn-2 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-a.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-a.svg);
 }
 
 .deco-btn-3 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-a.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-a.svg);
 }
 
 .deco-btn-4 {
     grid-column: 1 / 4;
     grid-row: 3;
-    background-image: url(ressources/images/decos-ctas/btn-deco-b.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-b.svg);
 }
 
 .deco-btn-5 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-d.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-d.svg);
     grid-column: 1 / 4;
     grid-row: 1;
 }
 
 .deco-btn-6 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-c.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-c.svg);
 }
 
 .deco-btn-7 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-c.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-c.svg);
 }
 
 .deco-btn-8 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-d.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-d.svg);
     grid-column: 1 / 4;
     grid-row: 3;
 }
 
 .deco-btn-9, .deco-btn-10 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-e.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-e.svg);
 }
 
 .deco-btn-11 {
     grid-column: 1 / 4;
     grid-row: 1;
-    background-image: url(ressources/images/decos-ctas/btn-deco-b.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-b.svg);
 }
 
 .deco-btn-12 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-a.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-a.svg);
 }
 
 .deco-btn-13 {
-    background-image: url(ressources/images/decos-ctas/btn-deco-a.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-a.svg);
 }
 
 .deco-btn-14 {
     grid-column: 1 / 4;
     grid-row: 3;
-    background-image: url(ressources/images/decos-ctas/btn-deco-b.svg);
+    background-image: url(resources/images/decos-ctas/btn-deco-b.svg);
 }
 
 /* ----------------------------- */
@@ -459,7 +459,7 @@ body {
 /* ----------- Footer ----------- */
 
 footer {
-    background: linear-gradient(rgba(13, 3, 18, 0.6), rgba(13, 3, 18, 0.6)), url("Ressources/Images/Footer-background.png") no-repeat center center;
+    background: linear-gradient(rgba(13, 3, 18, 0.6), rgba(13, 3, 18, 0.6)), url("resources/images/footer-background.png") no-repeat center center;
     background-size: cover;
     height: 250px;
     border-top: solid 1px #F7EFFB;
@@ -526,27 +526,27 @@ footer {
 }
 
 .fbk-icon {
-    background: url("ressources/images/social-icons/facebook.svg") no-repeat center center;
+    background: url("resources/images/social-icons/facebook.svg") no-repeat center center;
 }
 
 .insta-icon {
-    background: url("ressources/images/social-icons/instagram.svg") no-repeat center center;
+    background: url("resources/images/social-icons/instagram.svg") no-repeat center center;
 }
 
 .ytb-icon {
-    background: url("ressources/images/social-icons/youtube.svg") no-repeat center center;
+    background: url("resources/images/social-icons/youtube.svg") no-repeat center center;
 }
 
 .x-icon {
-    background: url("ressources/images/social-icons/x.svg") no-repeat center center;
+    background: url("resources/images/social-icons/x.svg") no-repeat center center;
 }
 
 .tiktok-icon {
-    background: url("ressources/images/social-icons/tiktok.svg") no-repeat center center;
+    background: url("resources/images/social-icons/tiktok.svg") no-repeat center center;
 }
 
 .discord-icon {
-    background: url("ressources/images/social-icons/discord.svg") no-repeat center center;
+    background: url("resources/images/social-icons/discord.svg") no-repeat center center;
 }
 
 .footer-links {
