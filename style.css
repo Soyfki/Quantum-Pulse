@@ -364,6 +364,10 @@ body {
     .landing-merch-cta {
         bottom: 10px;
     }
+
+    .landing-full-merch {
+        min-height: 400px;
+    }
 }
 
 .merch-section {
