@@ -1,6 +1,12 @@
+<!-- un petit coup de w3c validator pour verifier que ton html respecte les normes (Beau score en tout cas ! 🎉) -->
+<!-- https://validator.w3.org/nu/?doc=https://quantum-pulse-rose.vercel.app/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--  Add a Content-Security-Policy: Instruct the browser to load resources from trusted sources only. -->
+<!--  Example:  -->
+<!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://fonts.googleapis.com; style-src 'self' https://fonts.gstatic.com;">  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Pulse - Home</title>
@@ -8,6 +14,9 @@
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--      tu peux ne charger que les weight des font que tu utilise pour rendre ton site moins lourd  -->
+<!--      par exemple:  -->
+<!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,25 +30,26 @@
 
         <!-- Page title + main CTAs  -->
         <section class="landing-header-content">
+<!--            Avoid using <br> for spacing: Replace <br> tags with CSS margin or padding for spacing between lines.-->
+<!--            Why: Improves maintainability and separates structure from styling.-->
             <h1 class="landing-title">Quantum Pulse 2026</br>The great Conjunction</br><span class="h1-smaller">Be part of our new beyond the stars edition !</span></h1>
 
             <div class="landing-header-CTAs">
-                <div class="landing-header-cta">                    
+                <div class="landing-header-cta">
                     <div class="deco-btn-1 large-deco-cta"></div>
                     <div class="deco-btn-2 thin-deco-cta"></div>
                     <a href="#" class="main-cta" id="landing-header-CTA">TICKET NOW !</a>
                     <div class="deco-reversed deco-btn-3 thin-deco-cta"></div>
                     <div alt="" class="deco-reversed deco-btn-4 large-deco-cta"></div>
                 </div>
-
+<!-- Avoid href="#" in links: Replace href="#" with href="javascript:void(0)" or a meaningful URL.-->
+<!-- Why: Prevents unintended page reloads and improves user experience.    -->
                 <a href="#" class="secondary-cta">More infos</a>
             </div>
         </section>
     </header>
 
     <main>
-        
-        
 
         <!-- New merch section -->
         <section class="merch-section">
@@ -48,6 +58,8 @@
 
             <article class="landing-full-merch">
                 <div class="landing-triptych-merch">
+<!--                  la classe landing-merch-img-side sert a quelquechose ?  landing-merch-img-side -->
+<!--                  separer les img ab position absolute er le landing-merch-cta dans leurs conteneurs et ne mettre le position relative que la ou il faut  -->
                     <img src="resources/images/merch/mens/collector-hoodie/men-wearing-black-qp-hoodie-1-square.png" alt="Collector Hoodie" class="landing-merch-img landing-merch-img-A landing-merch-img-side landing-merch-img-left" id="landing-merch-img1">
                     <img src="resources/images/merch/mens/collector-t-shirt/men-wearing-qp-collector-shirt-3-square.png" alt="Collector Hoodie" class="landing-merch-img landing-merch-img-B landing-merch-img-center" id="landing-merch-img2">
                     <img src="resources/images/merch/womens/dress/women-wearing-galaxy-qp-dress-1-square.png" alt="Collector Hoodie" class="landing-merch-img landing-merch-img-C landing-merch-img-side landing-merch-img-right" id="landing-merch-img3">
@@ -58,7 +70,7 @@
                         <div class="thin-deco-cta deco-reversed deco-btn-7"></div>
                         <div class="large-deco-cta deco-reversed deco-btn-8"></div>
                     </div>
-                </div>                
+                </div>
             </article>
         </section>
 
@@ -104,7 +116,7 @@
         </div>
 
         <audio controls class="footer-player">
-            <source src="resources/audios/sound-of-the-space.mp3" type="audio/mpeg">
+            <source src="resources/audios/sound-of-the-space.mp3" type="audio/mpeg" >
         </audio>
 
         <div class="contact-bloc">
