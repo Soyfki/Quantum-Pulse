@@ -46,6 +46,9 @@ body {
 @media screen and (max-width: 600px) {
     .top-landing-section {
         height: 85vh;
+    }
+
+    header {
         margin-bottom: 40px;
     }
 }
