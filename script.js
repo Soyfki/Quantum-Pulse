@@ -1,3 +1,27 @@
+// ----------------- Player ------------------
+
+const playPauseBtn = document.querySelector('#play-pause-btn');
+const playerTitle = document.querySelector('#player-title');
+
+playPauseBtn.addEventListener('click',
+    function(){
+
+    if (playPauseBtn.classList.contains('play-btn')) {
+        // playPauseBtn.classList.remove('play-btn');
+        // playPauseBtn.classList.add('pause-btn');
+        playPauseBtn.classList.replace('play-btn', 'pause-btn');
+        playerTitle.classList.add('animated-player-title');
+    } else {
+        // playPauseBtn.classList.remove('pause-btn');
+        // playPauseBtn.classList.add('play-btn');
+        playPauseBtn.classList.replace('pause-btn', 'play-btn');
+        playerTitle.classList.remove('animated-player-title');
+    }
+
+});
+
+// ----------------- Merch carousel ------------------
+
 const imageElements = [
     document.querySelector('#landing-merch-img1'),
     document.querySelector('#landing-merch-img2'),

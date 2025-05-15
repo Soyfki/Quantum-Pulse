@@ -105,9 +105,31 @@
             <span class="footer-title">Quantum Pulse</span>
         </div>
 
-        <audio controls class="footer-player">
-            <source src="resources/audios/sound-of-the-space.mp3" type="audio/mpeg">
-        </audio>
+        <div class="temporary-player-div">
+            <div class="player">
+                <div class="play-btn" id="play-pause-btn"></div>
+                <div class="player-title-container">
+                    <span class="player-title" id="player-title">Sound of the space - Soyfki</span>
+                </div>
+                <div class="player-animation">
+                    <div class="stickA stick-paused" id="stickA"></div>
+                    <div class="stickB stick-paused" id="stickB"></div>
+                    <div class="stickC stick-paused" id="stickC"></div>
+                    <div class="stickD stick-paused" id="stickD"></div>
+                </div>
+                <div class="volume-btn-on" id="volume-btn"></div>
+                <div class="volume-setting-container" id="volume-setting-container">
+                    <div class="volume-on-icon"></div>
+                    <div class="input-volume-container">
+                        <input type="range" name="volume-setting" value="100" class="volume-setting" id="volume-setting" />
+                    </div>
+                    <div class="volume-off-icon"></div>
+                </div>
+            </div>
+            <audio controls class="footer-player">
+                <source src="resources/audios/sound-of-the-space.mp3" type="audio/mpeg">
+            </audio>
+        </div>
 
         <div class="contact-bloc">
             <div class="social-links">
