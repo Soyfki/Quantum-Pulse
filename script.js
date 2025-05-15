@@ -13,6 +13,8 @@ const playerSticks = [
 ]
 var sound = new Howl({
     src: ['resources/audios/sound-of-the-space.mp3'],
+    loop: true,
+    volume: 1,
 });
 
 playPauseBtn.addEventListener('click',
@@ -59,6 +61,17 @@ volumeSetting.addEventListener('input',
         } else {
             volumeBtn.classList.remove('volume-off-icon');
         }
+    });
+
+
+// --- Volume Setting
+volumeSetting.value = sound.volume() * 100;
+
+volumeSetting.addEventListener('input',
+    function () {
+    const sliderValue = this.value;
+    const howlerVolume = sliderValue / 100;
+    sound.volume(howlerVolume);
     });
 
 // ----------------- Merch carousel ------------------
