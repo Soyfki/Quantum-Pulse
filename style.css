@@ -83,7 +83,7 @@ body {
     margin-top: 100px;
 }
 
-.landing-p {
+.landing-p { 
     color: #F7EFFB;
     text-align: center;
 }
@@ -131,7 +131,7 @@ body {
     grid-gap: 0px;
 }
 
-.main-cta {
+.main-cta { 
     font-family: 'Nico-Moji';
     font-size: 24px;
     color: #F7EFFB;
@@ -151,15 +151,15 @@ body {
     color: #FF3700;
 }
 
-.secondary-cta {
+.secondary-cta { 
     font-family: 'Nico-Moji';
     font-size: 24px;
     color: #F7EFFB;
     background-color: transparent;
     border: solid 2px #F7EFFB;
     border-radius: 10px;
-    padding: 10px 16px;
-    text-decoration: none;
+    padding: 10px 16px;   
+    text-decoration: none; 
 }
 
 .secondary-cta:hover {
@@ -189,13 +189,13 @@ body {
     transform: translateX(-50%);
 }
 
-.deco-btn-A, .thin-deco-cta {
+.deco-btn-A, .thin-deco-cta { 
     width: 30px;
     height: 48px;
     background: no-repeat center center;
 }
 
-.deco-btn-B, .large-deco-cta {
+.deco-btn-B, .large-deco-cta { 
     width: 52px;
     height: 30px;
     background: no-repeat center center;
@@ -270,7 +270,7 @@ body {
 }
 
 /* ----------------------------- */
-/* il est chelou lui non ?*/
+
 .landing-merch-cta {
     width: 248.14px;
     left: 50%;
@@ -300,12 +300,12 @@ body {
     border-radius: 6px;
     border: solid 2px #F7EFFB;
     transition: all 0.7s ease-in-out;
+    transform: translateX(-50%);
 }
 
 
 .landing-merch-img-left {
     left: 15%;
-    /*left: 0;*/
     width: 240px;
     z-index: 2;
     top: 180px;
@@ -321,8 +321,6 @@ body {
 
 .landing-merch-img-right {
     left: 85%;
-    /*left: 100%;*/
-    /*transform: translateX(-100%);*/
     width: 240px;
     z-index: 1;
     top: 180px;
@@ -343,28 +341,28 @@ body {
         height: 400px;
     }
 
-    /*.landing-merch-img {*/
-    /*    transform: translateX(-50%);*/
-    /*}*/
+    .landing-merch-img {
+        transform: translateX(-50%);
+    }
 
     .landing-merch-img-left {
-        /*left: 22%;*/
+        left: 22%;
         width: 120px;
         top: 150px;
     }
 
     .landing-merch-img-center {
-        /*left: 50%;*/
+        left: 50%;
         width: 200px;
         top: 50px;
         transform: translateX(-50%);
     }
 
     .landing-merch-img-right {
-        /*left: 78%;*/
+        left: 78%;
         width: 120px;
         top: 150px;
-        /*transform: translateX(-50%);*/
+        transform: translateX(-50%);
     }
 
     .landing-merch-cta {
