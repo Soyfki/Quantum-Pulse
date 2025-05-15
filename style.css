@@ -135,7 +135,7 @@ body {
     grid-template-rows: repeat(3, auto);
     align-items: center;
     justify-items: center;
-    grid-gap: 0px;
+    grid-gap: 0;
 }
 
 .main-cta {
@@ -151,7 +151,7 @@ body {
 }
 
 .main-cta:hover {
-    box-shadow: 0px 0px 20px #F7A100;
+    box-shadow: 0 0 20px #F7A100;
 }
 
 .main-cta:active {
@@ -540,7 +540,7 @@ footer {
 .social-links {
     display: flex;
     flex-direction: row;
-    gap: 0px;
+    gap: 0;
 }
 
 .social-icon {
@@ -641,9 +641,7 @@ footer {
 }
 
 .animated-player-title {
-    animation-name: animatedPlayerTitle;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation: animatedPlayerTitle 20s linear infinite;
     overflow: visible;
     text-overflow: clip;
     display: block;
