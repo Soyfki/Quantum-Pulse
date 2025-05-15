@@ -704,7 +704,7 @@ footer {
 .stickA, .stickB, .stickC, .stickD {
     width: 3px;
     background-color: #F7EFFB;
-    animation-duration: 5s;
+    animation-duration: 0.385s;
     animation-iteration-count: infinite;
 }
 
