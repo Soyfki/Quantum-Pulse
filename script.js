@@ -1,3 +1,5 @@
+
+
 // ----------------- Player ------------------
 
 // --- Play/Pause Animation
@@ -9,40 +11,40 @@ const playerSticks = [
     document.querySelector('#stickC'),
     document.querySelector('#stickD')
 ]
+var sound = new Howl({
+    src: ['resources/audios/sound-of-the-space.mp3'],
+});
 
 playPauseBtn.addEventListener('click',
-    function(){
+    function () {
 
-    if (playPauseBtn.classList.contains('play-btn')) {
-        // playPauseBtn.classList.remove('play-btn');
-        // playPauseBtn.classList.add('pause-btn');
-        playPauseBtn.classList.replace('play-btn', 'pause-btn');
-        playerTitle.classList.add('animated-player-title');
-        playerSticks.forEach(element => {
-           element.classList.remove('stick-paused');
-        });
-    } else {
-        // playPauseBtn.classList.remove('pause-btn');
-        // playPauseBtn.classList.add('play-btn');
-        playPauseBtn.classList.replace('pause-btn', 'play-btn');
-        playerTitle.classList.remove('animated-player-title');
-        playerSticks.forEach(element => {
-            element.classList.add('stick-paused');
-        });
-    }
+        if (playPauseBtn.classList.contains('play-btn')) {
+            sound.play();
+            playPauseBtn.classList.replace('play-btn', 'pause-btn');
+            playerTitle.classList.add('animated-player-title');
+            playerSticks.forEach(element => {
+                element.classList.remove('stick-paused');
+            });
+        } else {
+            sound.stop();
+            playPauseBtn.classList.replace('pause-btn', 'play-btn');
+            playerTitle.classList.remove('animated-player-title');
+            playerSticks.forEach(element => {
+                element.classList.add('stick-paused');
+            });
+        }
 
-});
+    });
 
 // --- Show Volume setting
 const volumeBtn = document.querySelector('#volume-btn');
 const volumeContainer = document.querySelector('#volume-setting-container');
 
 volumeBtn.addEventListener('click',
-    function(){
+    function () {
         if (volumeContainer.classList.contains('volume-setting-container-hidden')) {
             volumeContainer.classList.remove('volume-setting-container-hidden');
-        }
-        else {
+        } else {
             volumeContainer.classList.add('volume-setting-container-hidden');
         }
     });
@@ -51,11 +53,10 @@ volumeBtn.addEventListener('click',
 const volumeSetting = document.querySelector('#volume-setting');
 
 volumeSetting.addEventListener('input',
-    function(){
+    function () {
         if (volumeSetting.value < 50) {
             volumeBtn.classList.add('volume-off-icon');
-        }
-        else {
+        } else {
             volumeBtn.classList.remove('volume-off-icon');
         }
     });
