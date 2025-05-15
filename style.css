@@ -67,15 +67,16 @@ body {
     font-size: 48px;
     color: #F7EFFB;
     margin-left: 40px;
-    display: inline-block;
+    display: block;
 }
 
 .h1-smaller {
     font-family: 'Inter';
     font-size: 28px;
-    display: inline-block;
+    display: block;
     margin-left: 40px;
     margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1160px) {
