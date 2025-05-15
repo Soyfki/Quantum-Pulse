@@ -56,7 +56,7 @@ const volumeSetting = document.querySelector('#volume-setting');
 
 volumeSetting.addEventListener('input',
     function () {
-        if (volumeSetting.value < 50) {
+        if (volumeSetting.value < 1) {
             volumeBtn.classList.add('volume-off-icon');
         } else {
             volumeBtn.classList.remove('volume-off-icon');
