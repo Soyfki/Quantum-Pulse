@@ -1,7 +1,14 @@
 // ----------------- Player ------------------
 
+// --- Play/Pause Animation
 const playPauseBtn = document.querySelector('#play-pause-btn');
 const playerTitle = document.querySelector('#player-title');
+const playerSticks = [
+    document.querySelector('#stickA'),
+    document.querySelector('#stickB'),
+    document.querySelector('#stickC'),
+    document.querySelector('#stickD')
+]
 
 playPauseBtn.addEventListener('click',
     function(){
@@ -11,14 +18,47 @@ playPauseBtn.addEventListener('click',
         // playPauseBtn.classList.add('pause-btn');
         playPauseBtn.classList.replace('play-btn', 'pause-btn');
         playerTitle.classList.add('animated-player-title');
+        playerSticks.forEach(element => {
+           element.classList.remove('stick-paused');
+        });
     } else {
         // playPauseBtn.classList.remove('pause-btn');
         // playPauseBtn.classList.add('play-btn');
         playPauseBtn.classList.replace('pause-btn', 'play-btn');
         playerTitle.classList.remove('animated-player-title');
+        playerSticks.forEach(element => {
+            element.classList.add('stick-paused');
+        });
     }
 
 });
+
+// --- Show Volume setting
+const volumeBtn = document.querySelector('#volume-btn');
+const volumeContainer = document.querySelector('#volume-setting-container');
+
+volumeBtn.addEventListener('click',
+    function(){
+        if (volumeContainer.classList.contains('volume-setting-container-hidden')) {
+            volumeContainer.classList.remove('volume-setting-container-hidden');
+        }
+        else {
+            volumeContainer.classList.add('volume-setting-container-hidden');
+        }
+    });
+
+// --- On/Off Volume Icon
+const volumeSetting = document.querySelector('#volume-setting');
+
+volumeSetting.addEventListener('input',
+    function(){
+        if (volumeSetting.value < 50) {
+            volumeBtn.classList.add('volume-off-icon');
+        }
+        else {
+            volumeBtn.classList.remove('volume-off-icon');
+        }
+    });
 
 // ----------------- Merch carousel ------------------
 

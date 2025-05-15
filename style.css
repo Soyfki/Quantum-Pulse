@@ -684,6 +684,7 @@ footer {
     width: 20px;
     height: 20px;
     background: no-repeat center center;
+    cursor: pointer;
 }
 
 .play-btn {
@@ -705,22 +706,101 @@ footer {
 .stickA, .stickB, .stickC, .stickD {
     width: 3px;
     background-color: #F7EFFB;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
-.stick-paused {
-    height: 2px;
+.stickA {
+    height: 15px;
+    animation-name: stickA;
+}
+
+@keyframes stickA {
+    0% {
+        height: 15px;
+    }
+
+    10% {
+        height: 20px;
+    }
+
+    70% {
+        height: 2px;
+    }
+
+    100% {
+        height: 15px;
+    }
 }
 
 .stickB {
     height: 20px;
+    animation-name: stickB;
+}
+
+@keyframes stickB {
+    0% {
+        height: 20px;
+    }
+
+    50% {
+        height: 2px;
+    }
+
+    100% {
+        height: 20px;
+    }
 }
 
 .stickC {
     height: 10px;
+    animation-name: stickC;
+}
+
+@keyframes stickC {
+    0% {
+        height: 10px;
+    }
+
+    25% {
+        height: 20px;
+    }
+
+    75% {
+        height: 2px;
+    }
+
+    100% {
+        height: 10px;
+    }
 }
 
 .stickD {
     height: 5px;
+    animation-name: stickD;
+}
+
+@keyframes stickD {
+    0% {
+        height: 5px;
+    }
+
+    40% {
+        height: 20px;
+    }
+
+    60% {
+        height: 2px;
+    }
+
+    100% {
+        height: 5px;
+    }
+}
+
+.stick-paused {
+    animation-play-state: paused;
+    height: 2px !important;
 }
 
 .volume-btn-on, .volume-btn-off {
@@ -754,6 +834,10 @@ footer {
     background: rgba(13, 3, 18, 0.2);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+}
+
+.volume-setting-container-hidden {
+    display: none;
 }
 
 .input-volume-container {
