@@ -878,6 +878,8 @@ footer {
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 4px;
+    touch-action: none;
+    -ms-touch-action: none;
 }
 
 .volume-on-icon, .volume-off-icon {
