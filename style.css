@@ -983,7 +983,12 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 60px;
-    background: black;
+    background: linear-gradient(rgba(13, 3, 18, 0.6), rgba(13, 3, 18, 0.6)), url(resources/images/header-background.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
 }
 
 .header-full-logo {
@@ -1023,6 +1028,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #0D0312;
 }
 
 .line-menu-header {
@@ -1046,6 +1052,12 @@ footer {
     align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+    .menu-header-list {
+        gap: 6px;
+    }
+}
+
 .stick-menu-header {
     width: 3px;
     height: 32px;
@@ -1054,11 +1066,17 @@ footer {
 }
 
 .account-sub-menu {
-    background: red;
+    background: #0D0312;
     position: absolute;
     bottom: 0;
     transform: translateY(calc(100% + 3px));
     right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .menu-header-link {
@@ -1070,12 +1088,80 @@ footer {
     white-space: nowrap;
     padding: 4px 10px;
     transition: color 0.2s ease-in-out;
-    background: green;
-    border: 1px solid yellow;
     border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+    .menu-header-link {
+        padding: 4px 4px;
+    }
+}
+
+.account-sub-menu-link {
+    font-family: 'Nico-Moji';
+    font-size: 16px;
+    line-height: 16px;
+    color: #F7EFFB;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-header-link:hover {
+    color: #F7A100;
+}
+
+.menu-header-link:active {
+    color: #F7A100;
+    border-color: #F7A100;
 
 }
 
+.header-logo-link {
+    text-decoration: none;
+}
+
+.menu-cart-btn, .menu-account-btn, .account-icon, .login-icon, .logout-icon {
+    height: 20px;
+    width: 20px;
+    background: no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.menu-cart-btn {
+    background-image: url(resources/images/icons/cart-icon-white.svg);
+}
+
+.menu-account-btn, .account-icon {
+    background-image: url(resources/images/icons/account-icon-white.svg);
+}
+
+.logout-icon {
+    background-image: url(resources/images/icons/logout-icon-white.svg);
+}
+
+.sub-menu-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+}
+
+.sub-menu-li:hover > .account-sub-menu-link {
+    color: #F7A100;
+}
+
+.sub-menu-li:hover > .account-icon {
+    background-image: url(resources/images/icons/account-icon-orange.svg);
+}
+
+.sub-menu-li:hover > .logout-icon {
+    background-image: url(resources/images/icons/logout-icon-orange.svg);
+}
 
 
 /* --------------------------------- */
