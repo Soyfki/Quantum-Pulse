@@ -102,24 +102,47 @@ function animateCarrousel() {
 
 let openSubMenu = undefined;
 
+// function addToggleEventListener(btn, subMenu) {
+//     const toggleFunction = () => {
+//         if (openSubMenu !== undefined) {
+//             openSubMenu.classList.toggle('sub-menu-show');
+//             if (openSubMenu === subMenu) {
+//                 return;
+//             }
+//         }
+//
+//         if (subMenu.classList.toggle('sub-menu-show')) {
+//             openSubMenu = subMenu;
+//         } else {
+//             openSubMenu = undefined;
+//         }
+//     };
+//
+//     btn.addEventListener('click', toggleFunction);
+//     btn.addEventListener('mouseover', toggleFunction);
+// }
+
 function addToggleEventListener(btn, subMenu) {
-    const toggleFunction = () => {
-        if (openSubMenu !== undefined) {
-            openSubMenu.classList.toggle('sub-menu-show');
-            if (openSubMenu === subMenu) {
-                return;
-            }
+    const eventHandler = () => {
+        if (openSubMenu === subMenu) {
+            // If the clicked/hovered menu is already open, close it.
+            subMenu.classList.remove('sub-menu-show');
+            openSubMenu = null;
+            return;
         }
 
-        if (subMenu.classList.toggle('sub-menu-show')) {
-            openSubMenu = subMenu;
-        } else {
-            openSubMenu = undefined;
+        // If another menu is open, close it.
+        if (openSubMenu) {
+            openSubMenu.classList.remove('sub-menu-show');
         }
+
+        // Open the new menu.
+        subMenu.classList.add('sub-menu-show');
+        openSubMenu = subMenu;
     };
 
-    btn.addEventListener('click', toggleFunction);
-    btn.addEventListener('mouseover', toggleFunction);
+    btn.addEventListener('click', eventHandler);
+    btn.addEventListener('mouseover', eventHandler);
 }
 
 addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
