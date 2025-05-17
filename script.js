@@ -130,52 +130,36 @@ function animateCarrousel() {
 // addToggleEventListener(document.querySelector('#medias-btn'), document.querySelector('#medias-sub-menu'));
 // addToggleEventListener(document.querySelector('#menu-account-btn'), document.querySelector('#account-sub-menu'));
 
-let openSubMenu = undefined;
+let openSubMenu = null;
 
 function isTouchDevice() {
-    return ('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0);
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+}
+
+function handleMenuInteraction(subMenu) {
+    if (openSubMenu === subMenu) {
+        subMenu.classList.remove('sub-menu-show');
+        openSubMenu = null;
+        return;
+    }
+
+    if (openSubMenu) {
+        openSubMenu.classList.remove('sub-menu-show');
+    }
+
+    subMenu.classList.add('sub-menu-show');
+    openSubMenu = subMenu;
 }
 
 function addToggleEventListener(btn, subMenu) {
-    const eventHandler = (event) => {
-        // Prevent the default action for 'click' on touch devices to avoid potential issues
-        if (isTouchDevice() && event.type === 'click') {
-            event.preventDefault();
-        }
-
-        // If the clicked/hovered menu is already open, close it.
-        if (openSubMenu === subMenu) {
-            subMenu.classList.remove('sub-menu-show');
-            openSubMenu = null;
-            return;
-        }
-
-        // If another menu is open, close it.
-        if (openSubMenu) {
-            openSubMenu.classList.remove('sub-menu-show');
-        }
-
-        // Open the new menu.
-        subMenu.classList.add('sub-menu-show');
-        openSubMenu = subMenu;
+    const specificEventHandler = () => {
+        handleMenuInteraction(subMenu);
     };
 
-    const touchDevice = isTouchDevice();
+    btn.addEventListener('click', specificEventHandler);
 
-    if (touchDevice) {
-        // Only use 'click' on touch devices
-        btn.addEventListener('click', eventHandler);
-        // On touch devices, you might want a different way to close the menu,
-        // like clicking outside of it. The current mouseleave won't work here.
-        // You might need to add a global click listener to close the menu
-        // when clicking anywhere else on the page.
-    } else {
-        // Use 'click' and 'mouseover' on non-touch devices
-        btn.addEventListener('click', eventHandler);
-        btn.addEventListener('mouseover', eventHandler);
-        subMenu.addEventListener('mouseleave', eventHandler);
+    if (!isTouchDevice()) {
+        btn.addEventListener('mouseover', specificEventHandler);
     }
 }
 
