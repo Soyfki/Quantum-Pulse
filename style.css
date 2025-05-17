@@ -1709,15 +1709,15 @@ footer {
     background: #0D0312;
     border-radius: 10px;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
-    transform: translateY(16px);
+    transform: translateY(calc(-100% + 16px));
     transition: all 0.2s ease-in-out;
     z-index: 999;
     opacity: 0;
 }
 
-.guide-size-pop-up-show {
+.size-guide-link:hover + .guide-size-pop-up, .size-guide-link:active + .guide-size-pop-up {
     opacity: 1;
 }
 
