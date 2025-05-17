@@ -93,16 +93,26 @@
     <nav class="merch-nav">
         <div class="merch-nav-line"></div>
         <ul class="merch-nav-list">
-            <li class="merch-nav-item">All</li>
+            <li class="merch-nav-item merch-nav-item-active" id="all-btn">All</li>
             <li class="merch-nav-stick"></li>
-            <li class="merch-nav-item">Mens</li>
+            <li class="merch-nav-item" id="mens-btn">Mens</li>
             <li class="merch-nav-stick"></li>
-            <li class="merch-nav-item">Womens</li>
+            <li class="merch-nav-item" id="womens-btn">Womens</li>
             <li class="merch-nav-stick"></li>
-            <li class="merch-nav-item">Accessories</li>
+            <li class="merch-nav-item" id="acc-btn">Accessories</li>
         </ul>
         <div class="merch-nav-line"></div>
     </nav>
+    <div class="merch-grid">
+        <div class="merch-card mens-merch"></div>
+        <div class="merch-card womens-merch"></div>
+        <div class="merch-card acc-merch"></div>
+        <div class="merch-card mens-merch"></div>
+        <div class="merch-card womens-merch"></div>
+        <div class="merch-card acc-merch"></div>
+        <div class="merch-card mens-merch"></div>
+        <div class="merch-card womens-merch"></div>
+    </div>
     <div class="placehorder"></div>
 
 </main>
@@ -159,6 +169,7 @@
         crossOrigin="anonymous" referrerpolicy="no-referrer">
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
-<script src="script.js" defer></script>
+<script src="script-common.js" defer></script>
+<script src="script-shop.js" defer></script>
 </body>
 </html>
