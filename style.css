@@ -1699,6 +1699,63 @@ footer {
 
 /* ------------------------------------ */
 
+/* ----------- Guide Size Pop-up ----------- */
+
+.guide-size-pop-up {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    background: #0D0312;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(16px);
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+    opacity: 0;
+}
+
+.guide-size-pop-up-show {
+    opacity: 1;
+}
+
+.guide-size-title, .thead-size, .tbody-size {
+    font-size: 12px;
+}
+
+th {
+    font-weight: 400;
+}
+
+.thead-size, .tbody-size {
+    display: block;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.thead-size {
+    font-weight: 600;
+    background: #D2A0E4;
+    color: #0D0312;
+}
+
+.row-a .tbody-size {
+    background: rgba(210, 160, 228, 0.2);
+}
+
+.row-b .tbody-size {
+    background: rgba(210, 160, 228, 0.4);
+}
+
+.guide-size-women {
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------- */
+
 .placehorder {
     height: 800px;
 }

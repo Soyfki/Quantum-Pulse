@@ -43,3 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     startSizeSelector();
 });
 
+// ----------------- Show Guide Size Pop-up ------------------
+
+const popUp = document.getElementById('guide-size-pop-up');
+const guideBtn = document.getElementById('size-guide-link');
+
+guideBtn.addEventListener('mouseover', () => {
+    popUp.classList.add('guide-size-pop-up-show');
+});
+
+guideBtn.addEventListener('mouseleave', () => {
+    popUp.classList.remove('guide-size-pop-up-show');
+});
