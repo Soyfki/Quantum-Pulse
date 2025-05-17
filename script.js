@@ -100,12 +100,53 @@ function animateCarrousel() {
 
 // ----------------- Sub-Menu display ------------------
 
+// let openSubMenu = undefined;
+//
+// function addToggleEventListener(btn, subMenu) {
+//     const eventHandler = () => {
+//         if (openSubMenu === subMenu) {
+//             // If the clicked/hovered menu is already open, close it.
+//             subMenu.classList.remove('sub-menu-show');
+//             openSubMenu = null;
+//             return;
+//         }
+//
+//         // If another menu is open, close it.
+//         if (openSubMenu) {
+//             openSubMenu.classList.remove('sub-menu-show');
+//         }
+//
+//         // Open the new menu.
+//         subMenu.classList.add('sub-menu-show');
+//         openSubMenu = subMenu;
+//     };
+//
+//     btn.addEventListener('click', eventHandler);
+//     btn.addEventListener('mouseover', eventHandler);
+//     subMenu.addEventListener('mouseleave', eventHandler);
+// }
+//
+// addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
+// addToggleEventListener(document.querySelector('#medias-btn'), document.querySelector('#medias-sub-menu'));
+// addToggleEventListener(document.querySelector('#menu-account-btn'), document.querySelector('#account-sub-menu'));
+
 let openSubMenu = undefined;
 
+function isTouchDevice() {
+    return ('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0);
+}
+
 function addToggleEventListener(btn, subMenu) {
-    const eventHandler = () => {
+    const eventHandler = (event) => {
+        // Prevent the default action for 'click' on touch devices to avoid potential issues
+        if (isTouchDevice() && event.type === 'click') {
+            event.preventDefault();
+        }
+
+        // If the clicked/hovered menu is already open, close it.
         if (openSubMenu === subMenu) {
-            // If the clicked/hovered menu is already open, close it.
             subMenu.classList.remove('sub-menu-show');
             openSubMenu = null;
             return;
@@ -121,9 +162,21 @@ function addToggleEventListener(btn, subMenu) {
         openSubMenu = subMenu;
     };
 
-    btn.addEventListener('click', eventHandler);
-    btn.addEventListener('mouseover', eventHandler);
-    subMenu.addEventListener('mouseleave', eventHandler);
+    const touchDevice = isTouchDevice();
+
+    if (touchDevice) {
+        // Only use 'click' on touch devices
+        btn.addEventListener('click', eventHandler);
+        // On touch devices, you might want a different way to close the menu,
+        // like clicking outside of it. The current mouseleave won't work here.
+        // You might need to add a global click listener to close the menu
+        // when clicking anywhere else on the page.
+    } else {
+        // Use 'click' and 'mouseover' on non-touch devices
+        btn.addEventListener('click', eventHandler);
+        btn.addEventListener('mouseover', eventHandler);
+        subMenu.addEventListener('mouseleave', eventHandler);
+    }
 }
 
 addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
