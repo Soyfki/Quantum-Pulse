@@ -1293,6 +1293,7 @@ footer {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 1s ease-in-out;
+    white-space: nowrap;
 }
 
 .show-sentence {
