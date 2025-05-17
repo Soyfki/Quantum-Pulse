@@ -17,7 +17,6 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-
 }
 
 .shop-body {
@@ -1732,7 +1731,7 @@ th {
 .thead-size, .tbody-size {
     display: block;
     text-align: center;
-    padding: 4px 10px;
+    padding: 2px 8px;
     border-radius: 4px;
 }
 
