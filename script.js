@@ -1,5 +1,3 @@
-
-
 // ----------------- Player ------------------
 
 // --- Play/Pause Animation
@@ -18,8 +16,7 @@ var sound = new Howl({
 });
 
 playPauseBtn.addEventListener('click',
-    function () {
-
+    () => {
         if (playPauseBtn.classList.contains('play-btn')) {
             sound.play();
             playPauseBtn.classList.replace('play-btn', 'pause-btn');
@@ -43,7 +40,7 @@ const volumeBtn = document.querySelector('#volume-btn');
 const volumeContainer = document.querySelector('#volume-setting-container');
 
 volumeBtn.addEventListener('click',
-    function () {
+    () => {
         if (volumeContainer.classList.contains('volume-setting-container-hidden')) {
             volumeContainer.classList.remove('volume-setting-container-hidden');
         } else {
@@ -55,7 +52,7 @@ volumeBtn.addEventListener('click',
 const volumeSetting = document.querySelector('#volume-setting');
 
 volumeSetting.addEventListener('input',
-    function () {
+    () => {
         if (volumeSetting.value < 1) {
             volumeBtn.classList.add('volume-off-icon');
         } else {
@@ -68,10 +65,10 @@ volumeSetting.addEventListener('input',
 volumeSetting.value = sound.volume() * 100;
 
 volumeSetting.addEventListener('input',
-    function () {
-    const sliderValue = this.value;
-    const howlerVolume = sliderValue / 100;
-    sound.volume(howlerVolume);
+    () => {
+        const sliderValue = this.value;
+        const howlerVolume = sliderValue / 100;
+        sound.volume(howlerVolume);
     });
 
 // ----------------- Merch carousel ------------------
@@ -100,6 +97,36 @@ function animateCarrousel() {
 
     currentIndex = left;
 }
+
+// ----------------- Sub-Menu display ------------------
+
+let openSubMenu = undefined;
+
+function addToggleEventListener(btn, subMenu) {
+    const toggleFunction = () => {
+        if (openSubMenu !== undefined) {
+            openSubMenu.classList.toggle('sub-menu-show');
+            if (openSubMenu === subMenu) {
+                return;
+            }
+        }
+
+        if (subMenu.classList.toggle('sub-menu-show')) {
+            openSubMenu = subMenu;
+        } else {
+            openSubMenu = undefined;
+        }
+    };
+
+    btn.addEventListener('click', toggleFunction);
+    btn.addEventListener('mouseover', toggleFunction);
+}
+
+addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
+addToggleEventListener(document.querySelector('#medias-btn'), document.querySelector('#medias-sub-menu'));
+addToggleEventListener(document.querySelector('#menu-account-btn'), document.querySelector('#account-sub-menu'));
+
+// -----------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(animateCarrousel, 5000); //
