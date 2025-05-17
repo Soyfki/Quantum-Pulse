@@ -285,6 +285,19 @@ body {
 
 /* ----------------------------- */
 
+/* ----------- Common Page ----------- */
+
+.page-title {
+    font-family: 'Nico-Moji';
+    font-size: 32px;
+    color: #F7A100;
+    margin: 40px 0 40px 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ----------------------------------- */
+
 /* ----------- Landing Header ----------- */
 
 .main-video {
@@ -1053,6 +1066,7 @@ footer {
     height: 46px;
     width: 100%;
     position: relative;
+    z-index: 99;
 }
 
 .line-menu-header {
@@ -1255,6 +1269,117 @@ footer {
 
 /* --------------------------------- */
 
+/* ----------- Promo Banner ----------- */
+
+.promos-banner {
+    width: 100%;
+    background: linear-gradient(rgba(247, 239, 251, 0.2), rgba(247, 239, 251, 0.2)), #0D0312;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sentence-container {
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+}
+
+.sentence {
+    display: inline-block;
+    font-size: 16px;
+    color: #F7EFFB;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* ------------------------------------ */
+
+/* ----------- Merch Nav ----------- */
+
+
+.merch-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    z-index: 98;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.merch-nav-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(180deg,rgba(76, 86, 93, 1) 0%, rgba(247, 239, 251, 1) 100%);
+    border-radius: 1.5px;
+}
+
+.merch-nav-stick {
+    width: 3px;
+    height: 32px;
+    background: linear-gradient(180deg,rgba(76, 86, 93, 1) 0%, rgba(247, 239, 251, 1) 100%);
+    border-radius: 1.5px;
+}
+
+.merch-nav-list, .merch-nav-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.merch-nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 4px 0;
+    position: relative;
+    align-items: center;
+}
+
+.merch-nav-item {
+    font-family: 'Nico-Moji';
+    font-size: 16px;
+    line-height: 16px;
+    color: #F7EFFB;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 4px 10px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.merch-nav-item:hover {
+    color: #D2A0E4;
+}
+
+.merch-nav-item:active {
+    border-color: #D2A0E4;
+}
+
+@media screen and (max-width: 500px) {
+    .merch-nav-list {
+        gap: 4px;
+    }
+
+    .merch-nav-item {
+        padding: 4px 4px;
+    }
+}
+
+/* --------------------------------- */
+
 .placehorder {
     height: 800px;
 }
+
+

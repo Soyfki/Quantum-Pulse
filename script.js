@@ -100,36 +100,6 @@ function animateCarrousel() {
 
 // ----------------- Sub-Menu display ------------------
 
-// let openSubMenu = undefined;
-//
-// function addToggleEventListener(btn, subMenu) {
-//     const eventHandler = () => {
-//         if (openSubMenu === subMenu) {
-//             // If the clicked/hovered menu is already open, close it.
-//             subMenu.classList.remove('sub-menu-show');
-//             openSubMenu = null;
-//             return;
-//         }
-//
-//         // If another menu is open, close it.
-//         if (openSubMenu) {
-//             openSubMenu.classList.remove('sub-menu-show');
-//         }
-//
-//         // Open the new menu.
-//         subMenu.classList.add('sub-menu-show');
-//         openSubMenu = subMenu;
-//     };
-//
-//     btn.addEventListener('click', eventHandler);
-//     btn.addEventListener('mouseover', eventHandler);
-//     subMenu.addEventListener('mouseleave', eventHandler);
-// }
-//
-// addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
-// addToggleEventListener(document.querySelector('#medias-btn'), document.querySelector('#medias-sub-menu'));
-// addToggleEventListener(document.querySelector('#menu-account-btn'), document.querySelector('#account-sub-menu'));
-
 let openSubMenu = null;
 
 function isTouchDevice() {
@@ -166,6 +136,84 @@ function addToggleEventListener(btn, subMenu) {
 addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
 addToggleEventListener(document.querySelector('#medias-btn'), document.querySelector('#medias-sub-menu'));
 addToggleEventListener(document.querySelector('#menu-account-btn'), document.querySelector('#account-sub-menu'));
+
+// ----------------- Promo Banner ------------------
+
+const sentenceContainer = document.querySelector('.sentence-container');
+const originalSentences = document.querySelectorAll('.sentence');
+const banner = document.querySelector('.promos-banner');
+
+const spacingVw = 60;
+let spacingPx = 0;
+
+let position = 0;
+const speed = 0.5;
+
+let initialPosition = 0;
+let totalOriginalWidth = 0;
+
+function calculateSpacingAndApply() {
+    spacingPx = (window.innerWidth * spacingVw) / 100;
+    originalSentences.forEach(sentence => {
+        sentence.style.marginRight = `${spacingPx}px`;
+    });
+
+    const clonedSentences = document.querySelectorAll('.sentence-container .sentence:nth-child(n+' + (originalSentences.length + 1) + ')');
+    clonedSentences.forEach(sentence => {
+        sentence.style.marginRight = `${spacingPx}px`;
+    });
+}
+
+function cloneSentences() {
+
+    const oldClones = document.querySelectorAll('.sentence-container .sentence:nth-child(n+' + (originalSentences.length + 1) + ')');
+    oldClones.forEach(clone => clone.remove());
+
+    originalSentences.forEach(sentence => {
+        const clone = sentence.cloneNode(true);
+        sentenceContainer.appendChild(clone);
+    });
+}
+
+function calculateMetrics() {
+    const allSentences = document.querySelectorAll('.sentence-container .sentence');
+    totalOriginalWidth = 0;
+    for(let i = 0; i < originalSentences.length; i++) {
+        totalOriginalWidth += originalSentences[i].offsetWidth + spacingPx;
+    }
+    totalOriginalWidth -= spacingPx;
+
+    initialPosition = (banner.offsetWidth / 2) - (originalSentences[0].offsetWidth / 2);
+
+    position = initialPosition;
+    sentenceContainer.style.transform = `translateX(${position}px)`;
+}
+
+function animate() {
+    position -= speed;
+
+    if (position <= initialPosition - totalOriginalWidth - spacingPx) {
+        position = initialPosition;
+    }
+
+    sentenceContainer.style.transform = `translateX(${position}px)`;
+
+    requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize', () => {
+    calculateSpacingAndApply();
+    cloneSentences();
+    calculateMetrics();
+});
+
+window.onload = () => {
+    calculateSpacingAndApply();
+    cloneSentences();
+    calculateMetrics();
+    animate();
+};
+
 
 // -----------------------------------
 
