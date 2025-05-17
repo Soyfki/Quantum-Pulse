@@ -102,26 +102,6 @@ function animateCarrousel() {
 
 let openSubMenu = undefined;
 
-// function addToggleEventListener(btn, subMenu) {
-//     const toggleFunction = () => {
-//         if (openSubMenu !== undefined) {
-//             openSubMenu.classList.toggle('sub-menu-show');
-//             if (openSubMenu === subMenu) {
-//                 return;
-//             }
-//         }
-//
-//         if (subMenu.classList.toggle('sub-menu-show')) {
-//             openSubMenu = subMenu;
-//         } else {
-//             openSubMenu = undefined;
-//         }
-//     };
-//
-//     btn.addEventListener('click', toggleFunction);
-//     btn.addEventListener('mouseover', toggleFunction);
-// }
-
 function addToggleEventListener(btn, subMenu) {
     const eventHandler = () => {
         if (openSubMenu === subMenu) {
@@ -143,6 +123,7 @@ function addToggleEventListener(btn, subMenu) {
 
     btn.addEventListener('click', eventHandler);
     btn.addEventListener('mouseover', eventHandler);
+    subMenu.addEventListener('mouseleave', eventHandler);
 }
 
 addToggleEventListener(document.querySelector('#festival-btn'), document.querySelector('#festival-sub-menu'));
