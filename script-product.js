@@ -55,3 +55,11 @@ guideBtn.addEventListener('mouseover', () => {
 guideBtn.addEventListener('mouseleave', () => {
     popUp.classList.remove('guide-size-pop-up-show');
 });
+
+guideBtn.addEventListener('touchstart', () => {
+    popUp.classList.add('guide-size-pop-up-show');
+});
+
+guideBtn.addEventListener('touchend', () => {
+    popUp.classList.remove('guide-size-pop-up-show');
+});
