@@ -20,6 +20,10 @@ body {
 
 }
 
+.shop-body {
+    background: #0D0312;
+}
+
 @font-face {
     font-family: 'Nico-Moji';
     src:url('resources/fonts/nico-moji/nico-moji.ttf.woff') format('woff'),
@@ -1364,6 +1368,7 @@ footer {
 }
 
 .merch-nav-item-active {
+    color: #D2A0E4;
     border-color: #D2A0E4;
 }
 
@@ -1397,22 +1402,150 @@ footer {
     width: 300px;
     height: 446px;
     display: flex;
+    transition: all 0.2s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    justify-content: space-between;
+    background: linear-gradient(135deg,rgba(247, 239, 251, 0.4) 0%, rgba(247, 239, 251, 0.1) 100%);
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #F7EFFB;
 }
 
 .merch-card-hidden {
     display: none;
 }
 
-.mens-merch {
-    background-color: blue;
+.merch-card-hidden-animation {
+    animation: hiddenCards 0.5s ease-in-out forwards;
 }
 
-.womens-merch {
-    background-color: pink;
+@keyframes hiddenCards {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+        width: 300px; /* Start at normal size */
+        height: 446px; /* Start at normal height */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translate(-50%, -50%); /* Scale down and move towards top-left */
+        width: 0; /* End with zero width */
+        height: 0; /* End with zero height */
+    }
 }
 
-.acc-merch {
-    background-color: green;
+.merch-card-appearing {
+    animation: appearCards 0.5s ease-out forwards;
+    /* forwards maintient l'état final de l'animation */
+}
+
+@keyframes appearCards {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Commence légèrement plus petit */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Revient à la taille normale */
+    }
+}
+
+.merch-card-img-container {
+    width: 260px;
+    height: 260px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #F7EFFB;
+    transition: all 0.2s ease-in-out;
+}
+
+.merch-card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.merch-card-title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nico-Moji';
+    font-size: 18px;
+    color: #F7EFFB;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.merch-card-cta {
+    text-decoration: none;
+    color: #F7EFFB;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #F7EFFB;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.merch-card-cta:hover {
+    color: #D2A0E4;
+    border-color:#D2A0E4;
+}
+
+.merch-card-cta:active {
+    color: #0D0312;
+    background-color:#D2A0E4;
+}
+
+@media screen and (max-width: 1064px) {
+    .merch-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 704px) {
+
+    .merch-grid {
+        gap: 20px;
+    }
+
+    .merch-card {
+        width: 150px;
+        height: 235px;
+        padding: 10px 10px;
+    }
+
+    .merch-card-img-container {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid #F7EFFB;
+    }
+
+    .merch-card-title {
+        font-size: 16px;
+    }
+
+    .merch-card-cta {
+        font-size: 12px;
+    }
+}
+
+.promo-price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ----------------------------------- */

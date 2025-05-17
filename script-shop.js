@@ -80,47 +80,54 @@ window.onload = () => {
 const mensMerch = document.querySelectorAll('.mens-merch');
 const womensMerch = document.querySelectorAll('.womens-merch');
 const accMerch = document.querySelectorAll('.acc-merch');
-const allMerch = document.querySelectorAll('.merch-card');
+const allMerch = document.querySelectorAll('.merch-card'); // NodeList
 const merchBtns = document.querySelectorAll('.merch-nav-item');
 const allBtn = document.querySelector('#all-btn');
 const menBtn = document.querySelector('#mens-btn');
 const womenBtn = document.querySelector('#womens-btn');
 const accBtn = document.querySelector('#acc-btn');
 
+const animationDuration = 500; // 0.5s
+
 function sortMerch() {
 
-    merchBtns.forEach(element => {
+    merchBtns.forEach(button => {
+        button.addEventListener('click', (event) => {
 
-        element.addEventListener('click', (event) => {
-
-            merchBtns.forEach(el => {
-                el.classList.remove('merch-nav-item-active');
+            merchBtns.forEach(btn => {
+                btn.classList.remove('merch-nav-item-active');
             });
-
             const clickedButton = event.target;
             clickedButton.classList.add('merch-nav-item-active');
 
-            allMerch.forEach(element => {
-                element.classList.add('merch-card-hidden');
+            let cardsToShow = [];
+            if (allBtn.classList.contains('merch-nav-item-active')) {
+                cardsToShow = Array.from(allMerch);
+            } else if (menBtn.classList.contains('merch-nav-item-active')) {
+                cardsToShow = Array.from(mensMerch);
+            } else if (womenBtn.classList.contains('merch-nav-item-active')) {
+                cardsToShow = Array.from(womensMerch);
+            } else if (accBtn.classList.contains('merch-nav-item-active')) {
+                cardsToShow = Array.from(accMerch);
+            }
+
+            const cardsToHide = Array.from(allMerch).filter(card => !cardsToShow.includes(card));
+
+            cardsToHide.forEach(card => {
+
+                card.classList.remove('merch-card-hidden-final');
+                card.classList.add('merch-card-hidden-animation');
+
+                setTimeout(() => {
+                    card.classList.add('merch-card-hidden');
+                }, animationDuration);
             });
 
-            if (allBtn.classList.contains('merch-nav-item-active')) {
-                allMerch.forEach(element => {
-                    element.classList.remove('merch-card-hidden');
-                });
-            } else if (menBtn.classList.contains('merch-nav-item-active')) {
-                mensMerch.forEach(element => {
-                    element.classList.remove('merch-card-hidden');
-                });
-            } else if (womenBtn.classList.contains('merch-nav-item-active')) {
-                womensMerch.forEach(element => {
-                    element.classList.remove('merch-card-hidden');
-                });
-            } else if (accBtn.classList.contains('merch-nav-item-active')) {
-                accMerch.forEach(element => {
-                    element.classList.remove('merch-card-hidden');
-                });
-            }
+            cardsToShow.forEach(card => {
+                card.classList.remove('merch-card-hidden-animation');
+                card.classList.remove('merch-card-hidden');
+                card.classList.add('merch-card-appearing');
+            });
         });
     });
 }
