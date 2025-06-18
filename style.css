@@ -1654,6 +1654,13 @@ footer {
     margin-bottom: 60px;
 }
 
+@media screen and (max-width: 450px) {
+    .guarantees-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 .guarantee-block {
     display: flex;
     flex-direction: column;
