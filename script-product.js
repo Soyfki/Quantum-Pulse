@@ -54,3 +54,23 @@ detailsLine.addEventListener('click', (event) => {
     detailsBlock.classList.toggle('product-details-showed');
 })
 
+// ----------------- Show Cart ------------------
+
+const cartPopUp = document.getElementById('cart-pop-up');
+const cartAddCTA = document.getElementById('product-add-cta');
+const closeBTN = document.getElementById('cart-close-btn');
+const animatedItem = document.getElementById('animated-cart-item');
+
+console.log("test1");
+
+cartAddCTA.addEventListener('click', (event) => {
+    console.log("test2");
+    cartPopUp.classList.add('cart-pop-up-showed');
+    animatedItem.classList.add('animated-cart-item-showed');
+    console.log("test3");
+})
+
+closeBTN.addEventListener('click', (event) => {
+    cartPopUp.classList.remove('cart-pop-up-showed');
+    animatedItem.classList.remove('animated-cart-item-showed');
+})
