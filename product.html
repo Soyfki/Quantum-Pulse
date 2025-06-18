@@ -11,7 +11,243 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="product-body">
+<div class="cart-pop-up" id="cart-pop-up">
+    <div class="cart-header">
+        <h2 class="cart-title">Your cart</h2>
+        <div class="close-btn"></div>
+    </div>
+    <div class="cart-body">
+        <div class="cart-body-content">
+            <div class="cart-items-section">
+                <div class="cart-item-full-bloc">
+                    <div class="cart-item-container">
+                        <div class="cart-item-img-container">
+                            <img class="cart-item-img" src="resources/images/merch/mens/collector-hoodie/men-wearing-black-qp-hoodie-1-square.png" alt="Collector Hoodie" />
+                        </div>
+                        <div class="imaged-cart-item-details">
+                            <span class="cart-item-label">Collector Hoodie</span>
+                            <span class="cart-item-price">60€</span>
+                            <div class="cart-item-size-selector">
+                                <select class="cart-item-size-select">
+                                    <option value="0" class="cart-item-size-option">S</option>
+                                    <option value="1" class="cart-item-size-option">M</option>
+                                    <option value="2" class="cart-item-size-option">L</option>
+                                    <option value="3" class="cart-item-size-option">XL</option>
+                                    <option value="4" class="cart-item-size-option">XXL</option>
+                                </select>
+                            </div>
+                            <div class="cart-item-quantity-container">
+                                <div class="cart-item-quantity-remove"></div>
+                                <div class="cart-item-quantity-number">1</div>
+                                <div class="cart-item-quantity-add"></div>
+                            </div>
+                        </div>
+                        <img class="cart-item-delete" src="resources/images/icons/white/delete.svg" alt="Delete item icon" />
+                    </div>
+                    <div class="cart-separator"></div>
+                </div>
+                <div class="cart-item-full-bloc">
+                    <div class="cart-item-container">
+                        <div class="cart-item-img-container">
+                            <img class="cart-item-img" src="resources/images/merch/accesoires/bracelet/qp-bracelet.jpg" alt="Stone and silver Bracelet" />
+                        </div>
+                        <div class="imaged-cart-item-details">
+                            <span class="cart-item-label">Stone & silver Bracelet</span>
+                            <span class="cart-item-price">45€</span>
+                            <div class="cart-item-quantity-container">
+                                <div class="cart-item-quantity-remove"></div>
+                                <div class="cart-item-quantity-number">1</div>
+                                <div class="cart-item-quantity-add"></div>
+                            </div>
+                        </div>
+                        <img class="cart-item-delete" src="resources/images/icons/white/delete.svg" alt="Delete item icon" />
+                    </div>
+                    <div class="cart-separator"></div>
+                </div>
+                <div class="cart-item-full-bloc">
+                    <div class="cart-item-container">
+                        <div class="cart-item-details">
+                            <span class="cart-item-label">Classic Entrance</span>
+                            <span class="cart-item-price">130€</span>
+                            <div class="cart-item-quantity-container">
+                                <div class="cart-item-quantity-remove"></div>
+                                <div class="cart-item-quantity-number">2</div>
+                                <div class="cart-item-quantity-add"></div>
+                            </div>
+                        </div>
+                        <img class="cart-item-delete" src="resources/images/icons/white/delete.svg" alt="Delete item icon" />
+                    </div>
+                    <div class="cart-separator"></div>
+                </div>
+                <div class="cart-item-full-bloc">
+                    <div class="cart-item-container">
+                        <div class="cart-item-details">
+                            <span class="cart-item-label">Parking Ticket</span>
+                            <span class="cart-item-price">7€</span>
+                            <div class="cart-item-quantity-container">
+                                <div class="cart-item-quantity-remove"></div>
+                                <div class="cart-item-quantity-number">1</div>
+                                <div class="cart-item-quantity-add"></div>
+                            </div>
+                        </div>
+                        <img class="cart-item-delete" src="resources/images/icons/white/delete.svg" alt="Delete item icon" />
+                    </div>
+                    <div class="cart-separator"></div>
+                </div>
+                <div class="cart-item-full-bloc">
+                    <div class="cart-item-container">
+                        <div class="cart-item-details">
+                            <span class="cart-item-label">Locker</span>
+                            <span class="cart-item-price">5€</span>
+                            <div class="cart-item-quantity-container">
+                                <div class="cart-item-quantity-remove"></div>
+                                <div class="cart-item-quantity-number">1</div>
+                                <div class="cart-item-quantity-add"></div>
+                            </div>
+                        </div>
+                        <img class="cart-item-delete" src="resources/images/icons/white/delete.svg" alt="Delete item icon" />
+                    </div>
+                    <div class="cart-separator"></div>
+                </div>
+            </div>
+            <div class="cart-free-gift-section-container">
+                <div class="cart-free-gift-section">
+                    <span class="free-gift-label">
+                        CLAIM YOUR FREE GIFT ! (YOU NEDD TO MANUALLY ADD IT TO YOUR CART)
+                    </span>
+                    <div class="free-gift-item-container">
+                        <img class="free-gift-img" src="resources/images/merch/accesoires/silver-cap/silver-cap.png" alt="Silver and black Cap - Free Gift" />
+                        <div class="free-gift-details-container">
+                            <span class="free-gift-item-label">Silver & black Cap</span>
+                            <div class="free-gift-details-line">
+                                <span class="free-gift-price">0€</span>
+                                <a class="cart-add-cta" href="#">ADD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-separator"></div>
+            </div>
+            <div class="cart-also-like-section">
+                <span class="also-like-label">YOU MIGHT ALSO LIKE</span>
+                <div class="also-like-items-container">
+                    <div class="also-like-items-line">
+                        <div class="also-like-item">
+                            <div class="also-like-item-container">
+                                <img class="also-like-img" src="resources/images/merch/accesoires/necklace/silver-qp-necklace.jpg" alt="Silver Necklace" />
+                                <span class="also-like-item-label">Silver Necklace</span>
+                                <span class="also-like-item-price">45€</span>
+                                <div class="cart-item-size-selector">
+                                    <select class="cart-item-size-select">
+                                        <option value="0" class="cart-item-size-option">S</option>
+                                        <option value="1" class="cart-item-size-option">M</option>
+                                        <option value="2" class="cart-item-size-option">L</option>
+                                        <option value="3" class="cart-item-size-option">XL</option>
+                                        <option value="4" class="cart-item-size-option">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="cart-add-cta" href="#">ADD</a>
+                        </div>
+                        <div class="also-like-item">
+                            <div class="also-like-item-container">
+                                <img class="also-like-img" src="resources/images/merch/mens/collector-t-shirt/men-wearing-qp-collector-shirt-3-square.png" alt="Collector T-shirt" />
+                                <span class="also-like-item-label">Collector T-shirt</span>
+                                <span class="also-like-item-price">35€</span>
+                                <div class="cart-item-size-selector cart-item-size-selector-show">
+                                    <select class="cart-item-size-select">
+                                        <option value="0" class="cart-item-size-option">S</option>
+                                        <option value="1" class="cart-item-size-option">M</option>
+                                        <option value="2" class="cart-item-size-option">L</option>
+                                        <option value="3" class="cart-item-size-option">XL</option>
+                                        <option value="4" class="cart-item-size-option">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="cart-add-cta" href="#">ADD</a>
+                        </div>
+                        <div class="also-like-item">
+                            <div class="also-like-item-container">
+                                <img class="also-like-img" src="resources/images/merch/mens/large-logo-t-shirt/weared-decorated-tshirt-square.png" alt="Decorated T-shirt" />
+                                <span class="also-like-item-label">Decorated T-shirt</span>
+                                <span class="also-like-item-price">25€</span>
+                                <div class="cart-item-size-selector cart-item-size-selector-show">
+                                    <select class="cart-item-size-select">
+                                        <option value="0" class="cart-item-size-option">S</option>
+                                        <option value="1" class="cart-item-size-option">M</option>
+                                        <option value="2" class="cart-item-size-option">L</option>
+                                        <option value="3" class="cart-item-size-option">XL</option>
+                                        <option value="4" class="cart-item-size-option">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="cart-add-cta" href="#">ADD</a>
+                        </div>
+                        <div class="also-like-item">
+                            <div class="also-like-item-container">
+                                <img class="also-like-img" src="resources/images/merch/mens/black-t-shirt/weared-black-shirt-2-square.png" alt="Black T-shirt" />
+                                <span class="also-like-item-label">Black T-shirt</span>
+                                <div class="cart-item-price-line">
+                                    <span class="also-like-item-price">20€</span>
+                                    <span class="also-like-item-old-price">25€</span>
+                                </div>
+                                <div class="cart-item-size-selector cart-item-size-selector-show">
+                                    <select class="cart-item-size-select">
+                                        <option value="0" class="cart-item-size-option">S</option>
+                                        <option value="1" class="cart-item-size-option">M</option>
+                                        <option value="2" class="cart-item-size-option">L</option>
+                                        <option value="3" class="cart-item-size-option">XL</option>
+                                        <option value="4" class="cart-item-size-option">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="cart-add-cta" href="#">ADD</a>
+                        </div>
+                        <div class="also-like-item">
+                            <div class="also-like-item-container">
+                                <img class="also-like-img" src="resources/images/merch/accesoires/black-cap/weared-black-qp-caps-square.png" alt="Black Cap" />
+                                <span class="also-like-item-label">Black Cap</span>
+                                <span class="also-like-item-price">20€</span>
+                                <div class="cart-item-size-selector">
+                                    <select class="cart-item-size-select">
+                                        <option value="0" class="cart-item-size-option">S</option>
+                                        <option value="1" class="cart-item-size-option">M</option>
+                                        <option value="2" class="cart-item-size-option">L</option>
+                                        <option value="3" class="cart-item-size-option">XL</option>
+                                        <option value="4" class="cart-item-size-option">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="cart-add-cta" href="#">ADD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="claim-container">
+            <span class="claim-span">Claim your free gift !</span>
+            <div class="claim-progress">
+                <div class="claim-progress-empty"></div>
+                <div class="claim-progress-filled"></div>
+            </div>
+        </div>
+        <div class="subtotal-line">
+            <span class="subtotal-label">SUBTOTAL</span>
+            <span class="subtotal-price">247</span>
+        </div>
+        <div class="decorated-cta full-cart-cta">
+            <div class="deco-btn-15 extra-thin-deco-cta"></div>
+            <div class="deco-btn-16 square-deco-cta"></div>
+            <a class="main-cta cart-cta" href="#">GO TO CHECKOUT</a>
+            <div class="deco-btn-17 deco-reversed square-deco-cta"></div>
+            <div class="deco-btn-18 deco-reversed extra-thin-deco-cta"></div>
+        </div>
+    </div>
+</div>
+
 <header class="site-header">
     <div class="site-top-header">
         <img src="resources/images/side-deco.png" alt="" class="header-side-deco">
@@ -345,8 +581,79 @@
             </div>
         </div>
     </div>
-    <div class="placehorder"></div>
+
+    <div class="price-and-cta-line">
+        <span class="product-price">60</span>
+        <div class="decorated-cta full-cart-cta product-cta">
+            <div class="deco-btn-15 extra-thin-deco-cta"></div>
+            <div class="deco-btn-16 square-deco-cta"></div>
+            <a class="main-cta cart-cta" href="#">Add to cart</a>
+            <div class="deco-btn-17 deco-reversed square-deco-cta"></div>
+            <div class="deco-btn-18 deco-reversed extra-thin-deco-cta"></div>
+        </div>
+    </div>
+
+    <div class="guarantees-section">
+        <div class="guarantee-block">
+            <img class="guarantee-img" src="resources/images/icons/white/check.svg" alt=""/>
+            <span class="guarantee-label">100% Return Guarantee</span>
+        </div>
+        <div class="guarantee-block">
+            <img class="guarantee-img" src="resources/images/icons/white/30days.svg" alt=""/>
+            <span class="guarantee-label">30 Days Return Policy</span>
+        </div>
+        <div class="guarantee-block">
+            <img class="guarantee-img" src="resources/images/icons/white/klarna.svg" alt=""/>
+            <span class="guarantee-label">Buy Now, Pay Later</span>
+        </div>
+    </div>
+
+    <div class="product-details-section">
+        <h2 class="description-title">Description</h2>
+        <p>A hoodie printed in the theme of Quantum Pulse 2026 with motifs that will take you on a journey into space.</p>
+        <div class="product-details-block">
+            <div class="product-details-title-line" id="product-details-title-line">
+                <h3 class="product-details-title">Product details</h3>
+                <img class="small-arrow" id="small-arrow" src="resources/images/icons/white/arrow.svg" alt=""/>
+            </div>
+            <div class="product-details" id="product-details">
+                <p>100% organic cotton</p>
+                <p><strong>WASH AND CARE</strong><br>
+                    Do Not Trumble Dry<br>
+                    Do Not Bleach<br>
+                    Machine Wash, Cold, Inside out<br>
+                    Do Not Iron<br>
+                    Maximum possible shrinkage 5%</p>
+                <p><strong>FIT</strong><br>
+                    Oversize fit</p>
+                <img class="product-label" src="resources/images/icons/label-gots.svg" alt="GOTS Label - Global Organic Textile Standard"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-also-like-section">
+        <h2 class="product-also-like-title">YOU MAY ALSO LIKE</h2>
+        <div class="product-also-like-cards">
+            <div class="merch-card mens-merch">
+                <div class="merch-card-img-container">
+                    <img class="merch-card-img" src="resources/images/merch/mens/collector-t-shirt/weared-collector-tshirt-1.jpg" alt="Collector T-shirt">
+                </div>
+                <h2 class="merch-card-title">Collector T-shirt</h2>
+                <span class="merch-card-price">35€</span>
+                <a href="#" class="merch-card-cta">Show me !</a>
+            </div>
+            <div class="merch-card mens-merch">
+                <div class="merch-card-img-container">
+                    <img class="merch-card-img" src="resources/images/merch/mens/large-logo-t-shirt/weared-decorated-tshirt-square.png" alt="Decorated T-shirt">
+                </div>
+                <h2 class="merch-card-title">Decorated T-shirt</h2>
+                <span class="merch-card-price">25€</span>
+                <a href="#" class="merch-card-cta">Show me !</a>
+            </div>
+        </div>
+    </div>
 </main>
+
 <footer>
     <div class="footer-full-logo">
         <img src="resources/images/logo-white.svg" alt="Logo Quantum Pulse" class="footer-logo">

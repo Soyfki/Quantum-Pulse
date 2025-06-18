@@ -42,3 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     startProduct();
     startSizeSelector();
 });
+
+// ----------------- Show Product details ------------------
+
+const detailsLine = document.getElementById('product-details-title-line');
+const arrow = document.getElementById('small-arrow');
+const detailsBlock = document.getElementById('product-details');
+
+detailsLine.addEventListener('click', (event) => {
+    arrow.classList.toggle('flipped-arrow');
+    detailsBlock.classList.toggle('product-details-showed');
+})
+
