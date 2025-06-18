@@ -1761,6 +1761,13 @@ footer {
     margin-top: 40px;
 }
 
+@media screen and (max-width: 395px) {
+    .product-also-like-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 /* -------------------------------------- */
 
 /* ----------- Product Image ----------- */
