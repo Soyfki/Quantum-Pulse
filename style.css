@@ -2641,7 +2641,7 @@ th {
     transform: rotate(180deg);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .lineup-block {
         width: 260px;
         height: 360px;
