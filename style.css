@@ -2560,6 +2560,7 @@ th {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 40px;
 }
 
 .lineup-cta {
@@ -2661,5 +2662,9 @@ th {
 
     .lineup-content {
         padding: 76px 0;
+    }
+
+    .lineup-full-cta, .lineup-title {
+        margin-bottom: 10px;
     }
 }
