@@ -2667,4 +2667,8 @@ th {
     .lineup-full-cta, .lineup-title {
         margin-bottom: 10px;
     }
+
+    .lineup-title {
+        margin-top: 10px;
+    }
 }
