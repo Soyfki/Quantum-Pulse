@@ -2481,3 +2481,73 @@ th {
 
 }
 
+/* ---------------------------- */
+
+/* ----------- Tickets ----------- */
+
+.tickets-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 840px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 60px;
+}
+
+.ticket-card {
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #F7EFFB;
+    border-radius: 10px;
+    background: linear-gradient(303deg,rgba(247, 239, 251, 0.2) 0%, rgba(247, 239, 251, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+}
+
+.ticket-card-deco {
+    height: 100px;
+    width: auto;
+}
+
+.ticket-title {
+    margin: 0;
+    font-family: 'Nico-Moji';
+    text-align: center;
+}
+
+.ticket-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.ticket-details {
+    margin: 0;
+    text-align: center;
+}
+
+.tickets-cta {
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 460px) {
+    .ticket-card {
+        width: 260px;
+    }
+}
