@@ -2551,3 +2551,115 @@ th {
         width: 260px;
     }
 }
+
+/* ------------------------------- */
+
+/* ----------- Lineup ----------- */
+
+.lineup-full-cta {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lineup-cta {
+    background: rgba(13, 3, 18, 0.5);
+}
+
+.lineup-block {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 440px;
+    width: 340px;
+    background: url("resources/images/stars-bkrd.svg") no-repeat center center, #0D0312;
+    border-radius: 20px;
+    border: 1px solid #F7EFFB;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.lineup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 0;
+    align-items: center;
+    z-index: 1;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.lineup-content::-webkit-scrollbar {
+    display: none;
+}
+
+.lineup-artist-line {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+
+.lineup-name {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nico-Moji';
+}
+
+.deco-lineup {
+    height: 24px;
+    width: 26px;
+    background-image: url("resources/images/icons/atome-logo.svg");
+}
+
+.lineup-separator {
+    width: 80px;
+    height: 2px;
+    border-radius: 1px;
+    background: rgba(247, 239, 251, 0.5);
+}
+
+.lineup-cache, .lineup-cache-reversed {
+    z-index: 2;
+    position: absolute;
+    border-radius: 20px 20px 0 0 ;
+    width: 338px;
+    height: 60px;
+    background: linear-gradient(180deg,rgba(13, 3, 18, 1) 60%, rgba(13, 3, 18, 0) 100%);
+    left: 0;
+}
+
+.lineup-cache {
+    top: 0;
+}
+
+.lineup-cache-reversed {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 375px) {
+    .lineup-block {
+        width: 260px;
+        height: 360px;
+    }
+
+    .lineup-cache, .lineup-cache-reversed {
+        width: 258px;
+    }
+
+    .lineup-name {
+        font-size: 16px;
+    }
+
+    .deco-lineup {
+        height: 12px;
+        width: 13px;
+    }
+
+    .lineup-content {
+        padding: 76px 0;
+    }
+}
