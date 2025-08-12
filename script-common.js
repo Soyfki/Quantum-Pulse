@@ -109,3 +109,29 @@ volumeSetting.addEventListener('input',
         const howlerVolume = parseFloat(sliderValue) / 100;
         sound.volume(howlerVolume);
     });
+
+// --- Footer position
+
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+const main = document.querySelector('main');
+
+function footerPosition() {
+    const windowHeight = window.innerHeight;
+    const headerHeight = header.offsetHeight;
+    const footerHeight = footer.offsetHeight;
+    const mainHeight = main.offsetHeight;
+
+    if ((mainHeight + headerHeight + footerHeight) < windowHeight) {
+        footer.classList.add('bottom-footer');
+    } else {
+        footer.classList.remove('bottom-footer');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    footerPosition();
+});
+
+window.addEventListener('resize', footerPosition);
+window.addEventListener('load', footerPosition);
